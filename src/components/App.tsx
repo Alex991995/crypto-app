@@ -1,22 +1,23 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Header from './Header';
-import Home from './Home';
+import Home from './Home/Home';
 import Cryptocurrency from './Cryptocurrency';
-import CryptoDetails from './CryptoDetails';
-
+import CryptoDetails from './CryptoDetails/CryptoDetails';
+import Footer from './Footer';
 
 function App() {
   return (
     <>
     <Header />
-      <div className='md:container md:mx-auto'>
+      <div className='box'>
         <Routes>
           <Route path='/' element={<Home />}/>
           <Route path='/cryptocurrency' element={< Cryptocurrency />}/>
           <Route path='/cryptocurrency/:uuid' element={< CryptoDetails />}/>
         </Routes>
       </div>
+    <Footer />
     </>
     
   );
