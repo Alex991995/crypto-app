@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react';
-// import millify from 'millify';
 import { IconType } from 'react-icons';
 
 interface dataProps{

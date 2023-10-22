@@ -34,7 +34,7 @@ function Home() {
 
       <ul className='list-crypto my-4'>
           {coins?.map((coin, index) => (
-          <Link to={coin.uuid} key={coin.uuid}>
+          <Link to={`/cryptocurrency/${coin.uuid}`} key={coin.uuid}>
             <li className='h-[200px] border bg-white border-slate-600 p-4 hover:shadow-lg' >
               <div className='flex justify-between'>
                 <h5>{++index +". "+ coin.name}</h5>

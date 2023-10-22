@@ -9,14 +9,12 @@ import CryptoStats from './CryptoStats';
 import millify from 'millify';
 import LineChart from './LineChart';
 
-
 function CryptoDetails() { 
   const [time, setTime] = useState("7d")
   const arrTime = ['3h', '24h', '7d', '30d', '3m' , '1y', '3y', '5y'];
   const {uuid} = useParams()
   const { data } = useGetCoinDetailsQuery({uuid,time})
   const { data: dataHistory} = useGetCoinHistoryQuery({uuid,time})
-
 
   return (
     <section className='mx-4'>

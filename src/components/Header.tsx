@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import icon from '../images/cryptocurrency.png';
 import { AiOutlineHome, AiOutlineFundProjectionScreen, AiOutlineMenu } from 'react-icons/ai';
@@ -27,10 +27,10 @@ function Header() {
             </NavLink>
           </div>
           <div>
-              <NavLink className={setActive} to='/cryptocurrency' onClick={() =>setShowMenu(false)}>
-                <AiOutlineFundProjectionScreen size='25'/> 
-                Cryptocurrency
-              </NavLink>
+            <NavLink className={setActive} to='/cryptocurrency' onClick={() =>setShowMenu(false)}>
+              <AiOutlineFundProjectionScreen size='25'/> 
+              Cryptocurrency
+            </NavLink>
           </div>
             
         </div>
