@@ -119,7 +119,7 @@ body{
       @apply bg-stone-800
     }
     .menu-active{
-      transform: translateY(101px);
+      transform: translateY(80px);
       z-index: 1;
     }
     .menu-icon{
