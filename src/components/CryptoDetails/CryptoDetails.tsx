@@ -64,7 +64,7 @@ function CryptoDetails() {
 
       <div className='mb-5'>
         <h3 className='text-center font-semibold text-3xl'>{data?.name} links</h3>
-        <ul className='w-3/6 m-auto'>
+        <ul className='list-links'>
           {data?.links.map( (link, index ) => (
             <li className='flex justify-between p-3' key={index}>
               <h4 className='font-medium font-["Verdana"] mr-3'>{link.type}</h4>

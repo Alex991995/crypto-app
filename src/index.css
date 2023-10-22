@@ -85,7 +85,9 @@ body{
       
     }
   }
-  
+  .list-links{
+    @apply w-3/6 m-auto
+  }
   .title-name-crypto{
     @apply text-blue-700 font-black	text-3xl
   }
@@ -131,6 +133,11 @@ body{
     }
     .navigation {
       padding-right: 0;
+    }
+  }
+  @media (max-width:726px){
+    .list-links {
+      width: 75%;
     }
   }
 }
