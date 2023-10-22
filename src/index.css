@@ -15,9 +15,9 @@ body{
   .title-main {
     font-weight: bold;
     color: rgb(30 41 59);
-    margin-top: 4rem;
     text-align: center;
     font-size: theme('fontSize.3xl');
+    margin: 4rem 1rem 0;
   }
   .title-info {
     color: theme('colors.gray.400');
@@ -28,44 +28,64 @@ body{
     font-weight: 600;
     font-size: x-large;
   }
+  .navigation {
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: rgb(41 37 36 / 1);
+  }
+
 
   .link {
     font-size: large;
     color: whitesmoke;
+    display: flex;
+    margin-right: 0.5rem;
   }
+  .menu-icon{
+    display: none;
+  }
+
+  .active {
+    color: rgb(59 130 246 / 1);
+  } 
+
   .wraper-link {
     display: flex;
     cursor: pointer;
     align-items: center;
-    &>div{
-      display: flex;
-      margin-right: 0.5rem;
-      &>a{
-        margin-left: 0.5rem
-      }
-    }
   }
   .input {
     border-bottom-width: 2px;
     padding: 0.75rem;
     @apply border-slate-600 outline-none focus:border-blue-600 transition-colors;
+
+
   }
   .list-crypto {
     display: grid;
-    margin: auto;
-    @apply  md:grid-cols-4 gap-6 w-2/3 m-auto;
+    gap: 1rem;
+    margin: 0 10px;
+    @apply sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4;
   }
   .dropdown{
     @apply w-44 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 my-3;
   }
-  .block-about-crypto{
-    &>.info-stats{
-      display: flex;
-      margin-left: 20px;
-      justify-content: space-between;
-      padding: 10px;
+  .info-stats{
+    display: flex;
+    margin-left: 20px;
+    justify-content: space-between;
+    padding: 10px;
+    transition: all .5s;
+    border-radius: 6px;
+    &:hover {
+      background-color: aliceblue
+      
     }
   }
+  
   .title-name-crypto{
     @apply text-blue-700 font-black	text-3xl
   }
@@ -78,4 +98,40 @@ body{
   .more-info-crypto{
     @apply text-blue-700 font-semibold
   }
+
+  @media (max-width:640px){ 
+    .list-crypto {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width:500px){
+    .wraper-link{
+      align-items: flex-start  !important;
+      flex-direction: column;
+      padding: 10px;
+      transition: all .5s;
+      z-index: -1;
+      &>div{
+        margin: 3px 0;
+      }
+      @apply bg-stone-800
+    }
+    .menu-active{
+      transform: translateY(101px);
+      z-index: 1;
+    }
+    .menu-icon{
+      display: block;
+      z-index: 1;
+      position: absolute;
+      right: 24px;
+      top: 40px
+    }
+    .navigation {
+      padding-right: 0;
+    }
+  }
 }
+

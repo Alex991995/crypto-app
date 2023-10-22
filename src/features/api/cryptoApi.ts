@@ -16,7 +16,7 @@ export const cryptoApi = createApi({
   reducerPath: 'cryptoApi',
   baseQuery: fetchBaseQuery({ baseUrl: baseUrl }),
   endpoints: (builder) => ({
-    getCoins: builder.query<Data,{value?:string, quantity:string }  >({
+    getCoins: builder.query<Data,{value?:string, quantity:number }  >({
       query: ({value, quantity}) => createRequest(`/coins?limit=${quantity}${value ? "&search="+value : '' }`),
       transformResponse: ( response:Root<Data> ) => response.data
     }),

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Loader from './Loader';
 
 function Cryptocurrency() {
-  const quantity: string = '100';
+  const quantity: number = 100;
   const [value, setValue] = useState<string>('')
 
   const { coins,  isSuccess, isLoading } = useGetCoinsQuery({value, quantity}, {
@@ -31,7 +31,7 @@ function Cryptocurrency() {
           {coins?.map((coin, index) => (
           <Link to={coin.uuid} key={coin.uuid}>
             <li className='h-[200px] border bg-white border-slate-600 p-4 hover:shadow-lg' >
-              <div className='flex justify-between'>
+              <div className='flex justify-between mt-5'>
                 <h5>{++index +". "+ coin.name}</h5>
                 <img src={coin.iconUrl} alt="#" className='w-[30px] mr-2'/>
               </div>

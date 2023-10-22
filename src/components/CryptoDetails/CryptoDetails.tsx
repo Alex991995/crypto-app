@@ -19,7 +19,7 @@ function CryptoDetails() {
 
 
   return (
-    <section>
+    <section className='mx-4'>
       <div className='text-center bottom-border mt-28'>
         <h2 className='title-name-crypto'>{data?.name} ({data?.symbol})</h2>
         <p className='text-gray-600 my-9'>{data?.name} live price in US Dollar (USD). View value statistics, market cap and supply.</p>
@@ -33,7 +33,7 @@ function CryptoDetails() {
 
       <LineChart historyAboutCoin={ dataHistory} nameCoin={data?.name} currentPrice={data?.price &&  millify(+data?.price)}/>
 
-      <div className='flex justify-between mt-12'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 mt-20'>
         <div className='block-about-crypto'>
           <div>
             <h2>{data?.name} Value Statistics</h2>
@@ -69,7 +69,7 @@ function CryptoDetails() {
         <ul className='w-3/6 m-auto'>
           {data?.links.map( (link, index ) => (
             <li className='flex justify-between p-3' key={index}>
-              <h4 className='font-medium font-["Verdana"]'>{link.type}</h4>
+              <h4 className='font-medium font-["Verdana"] mr-3'>{link.type}</h4>
               <a className='more-info-crypto hover:underline' href={link.url} target='_blank' rel="noreferrer" >{link.name}</a>
             </li>
           ) )}

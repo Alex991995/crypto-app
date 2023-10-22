@@ -6,7 +6,7 @@ import millify from 'millify';
 import { Link } from 'react-router-dom';
 
 function Home() { 
-  const quantity: string = '10';
+  const quantity: number = 10;
   const { coins, stats, isSuccess, isLoading } = useGetCoinsQuery({quantity}, {
     selectFromResult: ({data, isSuccess, isLoading}) => ({
       coins: data?.coins,
@@ -22,7 +22,7 @@ function Home() {
     {isLoading && <Loader/>}
     {isSuccess &&
     <>
-    <div className='grid grid-cols-2 gap-3 mt-4 [&>*]:min-w-[160px] justify-items-center'>
+    <div className='grid grid-cols-2 gap-3 mt-4 mx-3 [&>*]:min-w-[160px] justify-items-center '>
         <InfoOfTotal text={'Total Cryptocurrencies'} total={stats!.total}/>
         <InfoOfTotal text={'Total Exchanges'} total={stats!.totalExchanges}/>
         <InfoOfTotal text={'Total Market Cap:'} total={+stats!.totalMarketCap}/>

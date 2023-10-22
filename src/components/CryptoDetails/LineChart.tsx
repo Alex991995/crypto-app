@@ -57,7 +57,7 @@ function LineChart({historyAboutCoin, nameCoin, currentPrice}:IChart) {
 
   return (
     <div className='h-[800px] '>
-      <div className='flex justify-between'>
+      <div className='flex  md:justify-between md:flex-row flex-col items-center	'>
         <h3 className='title-name-crypto font-normal'>{nameCoin} Price Chart</h3>
         <p className='stats-result-crypto'><span className='mr-4'>Change:{historyAboutCoin?.change} % </span> Current {nameCoin} Price: $ {currentPrice} </p>
       </div>
