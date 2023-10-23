@@ -68,7 +68,7 @@ body{
     display: grid;
     gap: 1rem;
     margin: 0 10px;
-    @apply sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4;
+    @apply grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4;
   }
   .dropdown{
     @apply w-44 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 my-3;
@@ -101,13 +101,6 @@ body{
     @apply text-blue-700 font-semibold
   }
 
-  @media (max-width:640px){ 
-    .list-crypto {
-      width: 50%;
-      margin: 0 auto;
-    }
-  }
-
   @media (max-width:500px){
     .wraper-link{
       align-items: flex-start  !important;
@@ -135,6 +128,14 @@ body{
       padding-right: 0;
     }
   }
+
+  @media (max-width:640px){ 
+    .list-crypto {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+
   @media (max-width:726px){
     .list-links {
       width: 75%;
