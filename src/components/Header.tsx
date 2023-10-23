@@ -21,7 +21,7 @@ function Header() {
         <div className='menu-icon' onClick={toggelBurger}><AiOutlineMenu size='25' color='white'/></div>
         <div className={`${showMenu ? "wraper-link menu-active" : "wraper-link"}`}>
           <div>
-            <NavLink className={setActive} to='/'  onClick={() =>setShowMenu(false)}>
+            <NavLink className={setActive} to='/' onClick={() =>setShowMenu(false)}>
               <AiOutlineHome size='25'/> 
               Home
             </NavLink>

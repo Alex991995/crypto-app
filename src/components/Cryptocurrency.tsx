@@ -30,7 +30,7 @@ function Cryptocurrency() {
         <ul className='list-crypto'>
           {coins?.map((coin, index) => (
           <Link to={coin.uuid} key={coin.uuid}>
-            <li className='h-[200px] border bg-white border-slate-600 p-4 hover:shadow-lg' >
+            <li className='item-crypto ' >
               <div className='flex justify-between mt-5'>
                 <h5>{++index +". "+ coin.name}</h5>
                 <img src={coin.iconUrl} alt="#" className='w-[30px] mr-2'/>

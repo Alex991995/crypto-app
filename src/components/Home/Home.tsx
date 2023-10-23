@@ -22,7 +22,7 @@ function Home() {
     {isLoading && <Loader/>}
     {isSuccess &&
     <>
-    <div className='grid grid-cols-2 gap-3 mt-4 mx-3 [&>*]:min-w-[160px] justify-items-center '>
+    <div className='global-stats-crypto'>
         <InfoOfTotal text={'Total Cryptocurrencies'} total={stats!.total}/>
         <InfoOfTotal text={'Total Exchanges'} total={stats!.totalExchanges}/>
         <InfoOfTotal text={'Total Market Cap:'} total={+stats!.totalMarketCap}/>
@@ -35,7 +35,7 @@ function Home() {
       <ul className='list-crypto my-4'>
           {coins?.map((coin, index) => (
           <Link to={`/cryptocurrency/${coin.uuid}`} key={coin.uuid}>
-            <li className='h-[200px] border bg-white border-slate-600 p-4 hover:shadow-lg' >
+            <li className='item-crypto ' >
               <div className='flex justify-between'>
                 <h5>{++index +". "+ coin.name}</h5>
                 <img src={coin.iconUrl} alt="#" className='w-[30px] mr-2'/>
